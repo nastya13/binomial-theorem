@@ -13,11 +13,13 @@ pow a b = let
 	  in go b 1
 
 -- function of factorial
-fac :: Int -> Int -> Int
-fac a b = a
+fac :: Int -> Int
+fac 0 = 1
+fac 1 = 1
+fac a = a * (fac (a-1))
 
 -- function of binomial-theorem
 bin :: Int -> Int -> Int -> Int
 bin a b c = a
 
-main = print (pow 2 10)
+main = print (fac 2 )
